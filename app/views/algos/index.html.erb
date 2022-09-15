@@ -1,0 +1,11 @@
+<div id="algos">
+  <% @algos.each do |algo| %>
+    <section class="section section-padding">
+        <div class="container">
+        <div class="notification is-primary">
+          <%= render algo %>
+        </div>
+      </div>
+    </section>
+  <% end %>
+</div>
