@@ -1,27 +1,28 @@
 <%= javascript_import_module_tag "index" %>
 
-<section class="section">
-	<div class="container">
-		<div class="card is-fullwidth">
-			<header class="card-header">
-				<p class="card-header-title">Card #1</p>
-			</header>
-			<div class="card-content is-hidden">
-				<div class="content">
-					Content goes here <small>Small text</small>
-				</div>
-			</div>
-		</div>
+<div id="algos">
+  <% @algos.each do |algo| %>
+    <div class="container is-widescreen">
+        <div class="columns">
+          <div class="column is-full">
+            <div class="notification is-info">
+              <section class="section">
+                <div class="container">
+                  <div class="card is-fullwidth">
+                    <header class="card-header">
+                      <p class="card-header-title"><%=algo.display_name%></p>
+                    </header>
+                    <div class="card-content is-hidden">
+                      <div class="content">
+                        <%= render algo%>
+                      </div>
+                    </div>
+                  </div>
+              </section>
+            </div>
+          </div>
+        </div>
+    </div>
+  <% end %>
+</div>
 
-		<div class="card is-fullwidth">
-			<header class="card-header">
-				<p class="card-header-title">Card #2</p>
-			</header>
-			<div class="card-content is-hidden">
-				<div class="content">
-					Some more content. Look at all this whitespace. <small>(Unless you are on mobile)</small>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
