@@ -1,0 +1,13 @@
+<div id="algos">
+  <% @algos.each do |algo| %>
+    <div class="container is-widescreen">
+        <div class="columns">
+          <div class="column is-full">
+            <div class="notification is-info">
+              <%= render algo %>
+            </div>
+          </div>
+        </div>
+    </div>
+  <% end %>
+</div>
